@@ -20,8 +20,8 @@ allprojects {
     repositories {
         mavenCentral()
         mavenLocal()
-        maven("https://maven.lavalink.dev/releases")
-        maven("https://maven.lavalink.dev/snapshots")
+        maven("https://maven.pcreators.pl/releases")
+        maven("https://maven.pcreators.pl/snapshots")
         maven("https://jitpack.io")
     }
 
