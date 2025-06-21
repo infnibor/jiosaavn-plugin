@@ -67,9 +67,9 @@ if (System.getenv("USERNAME") != null && System.getenv("PASSWORD") != null) {
         repositories {
             maven {
                 url = if (preRelease) {
-                    uri("https://maven.appujet.site/snapshots")
+                    uri("https://maven.pcreators.pl/snapshots")
                 } else {
-                    uri("https://maven.appujet.site/releases")
+                    uri("https://maven.pcreators.pl/releases")
                 }
                 credentials {
                     username = System.getenv("USERNAME")
@@ -83,6 +83,7 @@ if (System.getenv("USERNAME") != null && System.getenv("PASSWORD") != null) {
 
         publications {
             create<MavenPublication>("jiosaavn-plugin") {
+                groupId = "com.github.infnibor"
                 artifactId = "jiosaavn-plugin"
                 version = verName
                 artifact(tasks.shadowJar.get())
@@ -96,7 +97,7 @@ if (System.getenv("USERNAME") != null && System.getenv("PASSWORD") != null) {
 
 githubRelease {
     token(System.getenv("GITHUB_TOKEN"))
-    owner("appujet")
+    owner("infnibor")
     repo("jiosaavn-plugin")
     targetCommitish(System.getenv("RELEASE_TARGET"))
     releaseAssets(tasks.shadowJar.get().outputs.files.toList())
@@ -111,8 +112,8 @@ githubRelease {
             |```yml
             |lavalink:
             |    plugins:
-            |        - dependency: "com.github.appujet:jiosaavn-plugin:$verName"
-            |          repository: https://maven.appujet.site/snapshots
+            |        - dependency: "com.github.infnibor:jiosaavn-plugin:$verName"
+            |          repository: https://maven.pcreators.pl/snapshots
             |```
         """.trimMargin())
     } else {

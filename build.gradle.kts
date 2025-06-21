@@ -24,6 +24,8 @@ allprojects {
         maven("https://maven.lavalink.dev/snapshots")
         maven("https://maven.appujet.site/releases")
         maven("https://maven.appujet.site/snapshots")
+        maven("https://maven.pcreators.pl/releases")
+        maven("https://maven.pcreators.pl/snapshots")
         maven("https://jitpack.io")
     }
 
