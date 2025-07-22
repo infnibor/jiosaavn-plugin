@@ -35,7 +35,7 @@ lavalink:
 # plugins would go here, but they are auto-loaded when developing
 #  plugins:
 #    - dependency: "com.github.appujet:jiosaavn-plugin:VERSION"
-#      repository: "https://jitpack.io"
+#      repository: "https://maven.appujet.site/releases"
   server:
     password: "youshallnotpass"
     sources:
@@ -62,7 +62,7 @@ lavalink:
 
 plugins:
   jiosaavn:
-    apiURL: "https://jiosaavn-plugin-api.vercel.app/api" # JioSaavn API URL
+    apiURL: "https://jiosaavn-plugin-api.vercel.app/api" # JioSaavn API URL (The default link may not work or may be out of date. Deploy your own api url on Vercel: https://vercel.com/new/clone?repository-url=https://github.com/appujet/jiosaavn-rest-api)
     playlistTrackLimit: 50 # The maximum number of tracks to return from given playlist (default 50 tracks)
     recommendationsTrackLimit: 10 # The maximum number of track to return from recommendations (default 10 tracks)
     
