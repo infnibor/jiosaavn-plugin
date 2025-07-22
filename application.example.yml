@@ -1,8 +1,8 @@
 plugins:
   jiosaavn:
-    apiURL: "your_api_url" # JioSaavn API URL
+    apiURL: "your_api_url" # JioSaavn API URL (Deploy your own api url on Vercel: https://vercel.com/new/clone?repository-url=https://github.com/appujet/jiosaavn-rest-api)
     playlistTrackLimit: 50 # The maximum number of tracks to return from given playlist (default 50 tracks)
-    recommendationsTrackLimit: 10
+    recommendationsTrackLimit: 10 # The maximum number of track to return from recommendations (default 10 tracks)
 
 server: # REST and WS server
   port: 2333
@@ -11,10 +11,8 @@ server: # REST and WS server
     enabled: false # Whether to enable HTTP/2 support
 lavalink:
   plugins:
-  # plugins would go here, but they are auto-loaded when developing
-  #  plugins:
-  #    - dependency: "com.github.appujet:jiosaavn-plugin:VERSION"
-  #      repository: "https://maven.appujet.site/releases"
+#    - dependency: "com.github.appujet:jiosaavn-plugin:VERSION"
+#      repository: "https://maven.appujet.site/releases"
   server:
     password: "youshallnotpass"
     sources:
